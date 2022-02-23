@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/elsa.png">
+    <script src="https://kit.fontawesome.com/05476a2ddc.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <title>Elsa Speak - Gia Sư Trí Tuệ Nhân Tạo, Giúp Bạn Thành Thạo Tiếng Anh</title>
+</head>
+<body>
+    <div class="header">
+        <img src="./img/Frame.png" alt="elsa-logo">
+    </div>
+    <div class="nav">
+        <div class="solgan">
+                <h1>app luyện nói <br>
+                    & giao tiếp tiếng anh thời 4.0</h1>
+                <p>với elsa speak - ai cũng có thể nói tiếng anh hay</p>
+                <a href="#section">Đăng ký ngay</a>
+        </div>
+        <div class="img">
+            <img src="./img/Frame (2).png" alt="">
+            <img src="./img/Phone 13 1.png" width="302px" height="459px">            
+        </div>
+    </div>
+    <div class="section" id="section">
+        <div class="form" id="form-1">
+            <div class="title">
+                <h1>cùng ứng dụng elsa <br> nói tiếng anh "thả ga"</h1>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <label for="name">Họ tên *</label><br>
+                <input type="text" required="required" id="fullname">
+                <span class="message"></span>
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-phone"></i>
+                <label for="name">Số điện thoại *</label><br>
+                <input type="text" required="required" id="phone">
+                <span class="message"></span>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <label for="name">Email *</label><br>
+                <input type="text" required="required" id="email">
+                <span class="message"></span>
+            </div>
+            <div class="form-group" id="checkBox">
+                <div class="inputCheck">
+                    <input type="checkbox" id="Check1" onclick="checkedFunction(this.id)" class="checkbox"> 
+                    <label for="pack1">Gói 1 năm</label> <br>
+                    <span>: 998.000 VND</span>
+                </div>
+                <div class="inputCheck">
+                    <input type="checkbox" id="Check2" onclick="checkedFunction(this.id)" class="checkbox"> 
+                    <label for="pack2">Gói trọn đời</label><br>
+                    <span>: 1.995.000 VND</span>
+                </div>
+            </div>
+            <div class="form-group" id="formButton">
+                <button onclick="submitForm()">Gửi đăng ký</button>
+            </div>
+        </div>
+        <div class="frame">
+            <img src="/img/Vector (2).png" alt="">
+            <img src="/img/Phone 15 1.png" alt="">        
+        </div>
+        <div class="square1"></div>
+        <div class="square2"></div>
+        <div class="cirlce1"></div>
+        <div class="cirlce2"></div>
+    </div>
+    <div class="container">
+        
+    </div>
+    <script>
+        Validator({
+            form: '#form-1',
+            rules: [
+                Validator.isPhone('#phone'),
+                Validator.isEmail('#email'),
+                Validator.isFullName('#fullname'),                
+            ]
+        })
+    </script>
+</body>
+</html>
